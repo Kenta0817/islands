@@ -1,0 +1,220 @@
+
+/* -------- loading -------- */
+
+/* progress-bar */
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #000;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 6px;
+}
+
+.pace .pace-progress-inner {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  opacity: 1.0;
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  -moz-transform: rotate(3deg) translate(0px, -4px);
+  -ms-transform: rotate(3deg) translate(0px, -4px);
+  -o-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
+.pace .pace-activity {
+  display: block;
+  position: fixed;
+  z-index: 2000;
+  top: 35px;
+  right: 35px;
+  width: 25px;
+  height: 25px;
+  border: solid 3px transparent;
+  border-top-color: #000;
+  border-left-color: #000;
+  border-radius: 100%;
+  -webkit-animation: pace-spinner 400ms linear infinite;
+  -moz-animation: pace-spinner 400ms linear infinite;
+  -ms-animation: pace-spinner 400ms linear infinite;
+  -o-animation: pace-spinner 400ms linear infinite;
+  animation: pace-spinner 400ms linear infinite;
+}
+
+@-webkit-keyframes pace-spinner {
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-moz-keyframes pace-spinner {
+  0% { -moz-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -moz-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-o-keyframes pace-spinner {
+  0% { -o-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-ms-keyframes pace-spinner {
+  0% { -ms-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -ms-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@keyframes pace-spinner {
+  0% { transform: rotate(0deg); transform: rotate(0deg); }
+  100% { transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+
+/* progress-bg */
+
+#fade {
+    width: 100%;
+    height: 100%;
+    display:block;
+    background-color: #000;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 50;
+    opacity:1;
+    transition: all 1.1s cubic-bezier(.86,0,.07,1);
+}
+#fade:before {
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  background-color: #fff;
+  transition: all 1.1s cubic-bezier(.86,0,.07,1);
+}
+
+.loadTitle {
+   position: relative;
+   display: flex;
+   width: 100%;
+   height: 100%;
+   align-items: center;
+   justify-content: center;
+}
+
+.loadTitle img {
+  width: 303px;
+  height: 84px;
+  margin-top: 35px;
+  opacity: 0;
+  filter: blur(2px);
+  transition: all ease 0.65s;
+}
+.pace-running .loadTitle img {
+  margin-top: 0;
+  opacity: 1;
+  filter: blur(0px);
+}
+.pace-done .loadTitle img {
+  margin-top: -65px;
+  opacity: 0;
+  filter: blur(2px);
+}
+
+
+.pace-done #fade:before {
+  height: 0%;
+  transition-delay: 0.4s;
+}
+.pace-done #fade {
+  height: 0%;
+  transition-delay: 0.9s;
+}
+
+
+
+#transition {
+    width: 100%;
+    height: 0%;
+    display:block;
+    background-color: #000;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 50;
+    opacity:1;
+    transition: all 1.1s cubic-bezier(.86,0,.07,1);
+}
+#transition:before {
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  bottom: 0px;
+  background-color: #fff;
+  transition: all 1.1s cubic-bezier(.86,0,.07,1);
+}
+
+body {
+  transition: all ease .5s;
+}
+body.transition {
+  opacity: 0;
+}
+
+
+
+/* 
+=================================================== 
+
+SP : 768px ~
+
+=================================================== 
+*/
+
+
+@media screen and (max-width:768px) {
+
+.loadTitle img {
+  width: 54vw;
+  height: auto;
+  margin-top: 0px;
+  opacity: 0;
+  filter: blur(2px);
+  transition: all ease 0.65s;
+}
+.pace-running .loadTitle img {
+  margin-top: 0px;
+  opacity: 0;
+  filter: blur(2px);
+}
+body.loading.pace-running .loadTitle img {
+  margin-top: 0;
+  opacity: 1;
+  filter: blur(0px);
+}
+body.loading.pace-done .loadTitle img {
+  margin-top: -65px;
+  opacity: 0;
+  filter: blur(2px);
+}
+
+
+/*
+--
+*/
+}
+
+
+

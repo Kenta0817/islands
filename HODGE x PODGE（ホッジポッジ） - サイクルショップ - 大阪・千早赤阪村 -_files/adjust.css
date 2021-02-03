@@ -1,0 +1,2765 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+/* 
+=================================================== 
+
+ SP : 768px ~
+
+ 0. Common
+ 1. header
+ 2. Footer
+ 3. Main
+ 4. Index
+ 5. Under
+ 6. Brand
+ 7. Blog
+ 8. Shop Info
+ 9. Contact
+
+=================================================== 
+*/
+
+
+@media screen and (max-width:768px) {
+
+/* 
+---------------------------------------------------
+  0. Common
+---------------------------------------------------
+*/
+
+body {
+	min-width: initial;
+}
+.wrapper {
+	overflow: hidden;
+}
+
+
+/* 
+---------------------------------------------------
+  1. Header
+---------------------------------------------------
+*/
+
+/*
+-------------------------------------
+  1-1. Menu
+- - - - - - - - - - - - - - - - - - - 
+*/
+
+
+/* ---- Common ---- */
+
+header > .inner {
+	width: 83.5%;
+}
+
+
+/* ---- Title ---- */
+
+header .title {
+	position: absolute;
+	top: 60px;
+	z-index: 1;
+	opacity: 0;
+	transition:all ease 0.3s;
+	transition-delay: 2.7s;
+}
+header .title img {
+	width: 185px;
+}
+body.pace-done header .title {
+	opacity: 1;
+	top: 37px;
+}
+
+
+/*
+forUnder
+*/
+
+body.under.pace-done.addAnim header .title {
+	opacity: 1;
+	top: 37px;
+}
+
+
+
+/* ---- mainNav ---- */
+
+header .mainNav {
+	display: none;
+}
+
+
+/* ---- MainSNS ---- */
+
+.mainSNS {
+	display: none;
+}
+
+
+/* ---- headInfo ---- */
+
+.headInfo {
+	top:initial;
+	bottom: 13px;
+	left: -5px;
+}
+.headInfo .txt {
+	font-size: 1rem;
+	margin-left: 29px;
+}
+
+body.under .headInfo {
+	display: none;
+}
+
+
+/* ---- Scroll ---- */
+
+.scroll {
+	display: none;
+}
+
+
+/*
+-------------------------------------
+  1-2. Humburgur
+- - - - - - - - - - - - - - - - - - - 
+*/
+
+/* ---- humbBtn ---- */
+
+/* common */
+
+.humbPC {
+	display: none;
+}
+.humbSP {
+	display: block;
+	height: 100%;
+	opacity: 0;
+	transition: all ease .45s;
+}
+.humbCont.active .humbSP {
+	opacity: 1;
+}
+
+
+.humbSP > .inner {
+	width: 62%;
+	margin:22vw auto;
+}
+
+.humbBtn {
+	height: 77px;
+	width: 77px;
+}
+.humbBtn .inner {
+	width: 26%;
+	left: 52%;
+}
+
+
+
+/* ---- humbNavSP ---- */
+
+/* common */
+
+.humbNavSP {
+	color: #fff;
+	display: flex;
+}
+.humbNavSP a {
+	color: #fff;
+}
+.humbNavSP ul + ul {
+	margin-left: 48px;
+}
+
+
+/* main */
+
+.humbNavSP ul li {
+	font-size: 14.3vw;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	font-family: rama-gothic-c, sans-serif;
+	font-weight: 700;
+}
+.humbNavSP ul li span.window:after {
+    content: "";
+    height: 12px;
+    width: 15px;
+    position: absolute;
+    top: 48%;
+    right: -4.9vw;
+    transform: translateY(-50%);
+    display: inline-block;
+    background-size: cover;
+    background-image: url(/../wp-content/themes/HodgePodge_2020-1027/assets/img/common/windowW.svg);
+    transition: all ease .25s;
+}
+
+.humbNavSP ul li + li {
+	margin-top: 1.4vw;
+}
+
+.humbNavSP ul li {
+	opacity: 0;
+	transition: all 1.0s cubic-bezier(.9,0,.1,1);
+	transform: translateY(4vw);
+}
+.humbCont.active .humbSP.active .humbNavSP ul li {
+	opacity: 1;
+	transform: translateY(0vw);
+}
+.humbCont.active .humbSP.active .humbNavSP ul li:nth-child(1) {
+	transform: translateY(0vw);
+	transition-delay: .1s;
+}
+.humbCont.active .humbSP.active .humbNavSP ul li:nth-child(2) {
+	transform: translateY(0vw);
+	transition-delay: .15s;
+}
+.humbCont.active .humbSP.active .humbNavSP ul li:nth-child(3) {
+	transform: translateY(0vw);
+	transition-delay: .2s;
+}
+.humbCont.active .humbSP.active .humbNavSP ul li:nth-child(4) {
+	transform: translateY(0vw);
+	transition-delay: .25s;
+}
+
+
+/* ---- humbNavUnder ---- */
+
+.humbNavUnder {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	opacity: 0;
+	transition: all ease .35s;
+	visibility: hidden;
+	transition-delay: 0.55s;
+}
+.humbNavUnder.active {
+	opacity: 1;
+	visibility: visible;
+	transition-delay: 0s;
+}
+.humbNavUnder > ul.main {
+	width: 63%;
+    margin: 20vw auto;
+    opacity: 0;
+    transition: all ease .25s;
+}
+.humbNavUnder > ul.main {
+	opacity: 1;
+}
+.humbNavUnder ul li {
+	font-size: 13vw;
+}
+
+.humbNavUnder > ul.main .backIndex {
+	font-size: 2.7rem;
+    margin-bottom: 21px;
+    margin-top: -25px;
+}
+.humbCont.active .humbSP.active .humbNavUnder.humbNavSP ul li {
+	opacity: 0;
+    transition: all 1.0s cubic-bezier(.9,0,.1,1);
+    transform: translateY(4vw);
+    visibility: hidden;
+}
+
+.humbCont.active .humbSP .humbNavUnder.humbNavSP.active ul li {
+	opacity: 1;
+	transform: translateY(0vw);
+	visibility: visible;
+}
+.humbCont.active .humbSP .humbNavUnder.humbNavSP.active ul li:nth-child(1) {
+	transition-delay: 0s;
+}
+.humbCont.active .humbSP .humbNavUnder.humbNavSP.active ul li:nth-child(2) {
+	transition-delay: .05s;
+}
+.humbCont.active .humbSP .humbNavUnder.humbNavSP.active ul li:nth-child(3) {
+	transition-delay: .1s;
+}
+.humbCont.active .humbSP .humbNavUnder.humbNavSP.active ul li:nth-child(4) {
+	transition-delay: .15s;
+}
+.humbCont.active .humbSP .humbNavUnder.humbNavSP.active ul li:nth-child(5) {
+	transition-delay: .2s;
+}
+.humbCont.active .humbSP .humbNavUnder.humbNavSP.active ul li:nth-child(6) {
+	transition-delay: .25s;
+}
+
+
+
+
+/* ---- humbSubNav ---- */
+
+.humbSubNav {
+	margin-top: 8vw;
+	opacity: 0;
+	transition: all 1.0s cubic-bezier(.9,0,.1,1);
+	transform: translateY(4vw);
+}
+.humbCont.active .humbSubNav {
+	transform: translateY(0vw);
+	opacity: 1;
+	transition-delay: .3s;
+}
+
+.humbSubNav ul {
+	display: flex;
+}
+.humbSubNav li a {
+	font-size: 1.4rem;
+	font-family:'DIN Next LT W01 Bold';
+	text-transform: uppercase;
+	color:#fff;
+}
+.humbSubNav li + li:before {
+	content:"/";
+	color:#fff;
+	margin-left: 8px;
+	margin-right: 6px;
+}
+
+
+/* ---- humbSNS_SP ---- */
+
+.humbSNS_SP {
+	margin-top: 13vw;
+	margin-left: -3px;
+	opacity: 0;
+	transition: all 1.0s cubic-bezier(.9,0,.1,1);
+	transform: translateY(4vw);
+}
+.humbCont.active .humbSNS_SP {
+	transform: translateY(0vw);
+	opacity: 1;
+	transition-delay: .35s;
+}
+
+.humbSNS_SP ul {
+	display: flex;
+}
+.humbSNS_SP li {
+	width: 44px;
+	height: 44px;
+	border: 1px solid rgba(255,255,255,0.25);
+	border-radius: 100%;
+	text-align: center;
+	line-height: 47px;
+}
+.humbSNS_SP li + li {
+	margin-left: 7px;
+}
+.humbSNS_SP li a {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	font-size: 1.8rem;
+	color:#fff;
+	opacity: 1;
+}
+
+
+
+
+/* 
+---------------------------------------------------
+  2. Footer
+---------------------------------------------------
+*/
+
+/* ---- common  ---- */
+
+footer {
+	margin-top: 30px;
+}
+footer > .inner {
+	width: 76.6%;
+	margin:0 auto;
+	padding-top: 70px;
+	color:#fff;
+}
+
+/* ---- footTop  ---- */
+
+/* left */
+
+.footTop .left {
+	width: 100%;
+}
+
+
+/* right */
+
+/*
+common
+*/
+
+.footTop .right {
+	display: none;
+}
+
+/*
+Logo
+*/
+
+.footInfo .logo img {
+	width: 63vw;
+	height: auto;
+	margin-left: -3px;
+}
+
+/*
+address
+*/
+
+.footInfo address {
+	font-size: 1.3rem;
+	line-height: 1.8;
+	letter-spacing: 0.04em;
+	margin-top: 28px;
+	opacity: 0.8;
+}
+
+/*
+info
+*/
+
+.footInfo .info {
+	font-size: 1.6rem;
+	font-family:'DIN Next LT W01 Medium';
+	margin-top: 5px;
+	opacity: 0.8;
+}
+.footInfo .info .open span {
+	font-size: 1rem;
+}
+
+/*
+map
+*/
+
+.toMap {
+	display: none;
+}
+
+/*
+footSNS
+*/
+
+ul.footSNS {
+	margin-top: 36px;
+	display: flex;
+	margin-left: -3px;
+}
+ul.footSNS li {
+	width: 48px;
+	height: 48px;
+	border: 1px solid rgba(255,255,255,0.2);
+	border-radius: 100%;
+	text-align: center;
+	line-height: 51px;
+}
+ul.footSNS li + li {
+	margin-left: 6px;
+}
+ul.footSNS li a {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	font-size: 1.6rem;
+	color:#fff;
+	opacity: 0.9;
+}
+
+
+/* ---- footBottom ---- */
+
+/* common */
+
+.footBottom {
+	margin-top: 146px;
+	padding-bottom: 26px;
+}
+
+
+/* copy */
+
+.footBottom .copy {
+	font-size: 1.1rem;
+	opacity: 0.3;
+}
+
+
+/* totop */
+
+.toTop {
+	height: 56px;
+	width: 56px;
+	border: 1px solid rgba(255,255,255,0.15);
+	bottom: 22px;
+	right: 14px;
+}
+.toTop:before {
+    border-top: solid 2px rgba(255,255,255,0.8);
+    border-right: solid 2px rgba(255,255,255,0.8);
+    width: 8px;
+    height: 8px;
+    margin-top: 7px;
+}
+
+
+
+
+/* 
+---------------------------------------------------
+  3. Main
+---------------------------------------------------
+*/
+
+
+/*
+--------------------------------------
+  3-1. Section
+- - - - - - - - - - - - - - - - - - - 
+*/
+
+/* ---- section / common  ---- */
+
+/* common */
+
+section.sect {
+	margin-top: 0px;
+}
+section.about {
+	margin-top: 0;
+	padding-top: 45px;
+}
+section.serviceSelect {
+	padding-top: 45px;
+}
+
+
+section.sect > .inner {
+	width: 82%;
+	padding-left: 6px;
+}
+
+/* connect */
+
+section.sect + section.sect {
+	margin-top: 75px;
+	padding-top: 62px;
+}
+section.service + section.sect {
+	margin-top: 0;
+}
+section.brand + section.sect {
+    margin-top: 0;
+}
+
+section.sect + section.gallery {
+	margin-top: 0px;
+}
+
+
+
+/* ---- section / left + right  ---- */
+
+/* common */
+
+section.sect > .inner.flex {
+	flex-direction: column;
+}
+section.sect > .inner.flex > div {
+	width: 100%;
+}
+
+/* left */
+
+section.sect > .inner.flex > .left {
+	width: 100%;
+}
+section.sect .left .copy {
+	font-size: 33.5vw;
+    line-height: 0.85;
+    letter-spacing: 0.03em;
+    position: relative;
+    top:initial;
+    padding-bottom: initial;
+}
+
+
+/* right */
+
+section.sect > .inner.flex > .right {
+	width: 100%;
+	margin-top: 34px;
+}
+section.sect .right .title {
+	font-size: 2.6rem;
+	letter-spacing: -0.1em;
+	margin-left: -2px;
+	margin-top: -3px;
+}
+section.sect .right .interview {
+	font-size: 2.5rem;
+	line-height: 1.4;
+}
+section.sect .right .desc + .interview {
+    margin-top: 1.6em;
+}
+
+section.sect .right .title span {
+    font-size: 1.5rem;
+    letter-spacing: 0.04em;
+    margin-left: 1px;
+    margin-top: 3px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+section.sect .right .desc {
+	margin-top: 1.6em;
+	font-size: 1.3rem;
+	line-height: 2.2;
+}
+
+
+
+/* ---- section / top + under  ---- */
+
+/* title */
+
+section.sect .top .title {
+	font-size: 33.5vw;
+	letter-spacing: 0.02em;
+}
+
+
+
+/* ---- section / base slider  ---- */
+
+
+/* Base-Slider */
+
+.baseSlider{
+	margin-top: 44px;
+	height: 110%;
+}
+.baseSlider .slick-list {
+	width: 180%;
+}
+.baseSlider:before {
+	top: 10vw;
+}
+
+
+/* Button */
+
+.slick-arrow {
+	display: none;
+}
+
+
+/* ServSlide */
+
+/*
+common
+*/
+
+.baseSlider .slick-slide + .slick-slide {
+    margin-left: 25px;
+}
+.baseSlider .servSlide {
+	padding-bottom: 18vw;
+}
+
+
+/*
+image
+*/
+
+.baseSlider .servSlide .image {
+    height: 64vw;
+}
+
+
+/*
+cont
+*/
+
+.baseSlider .servSlide .cont {
+	margin-top: 30px;
+}
+.baseSlider .servSlide .title {
+	font-size: 4.7rem;
+}
+.baseSlider .servSlide .title a {
+    display: block;
+    align-items: initial;
+}
+.baseSlider .servSlide .title.prepare a:after {
+    display: block;
+    font-size: 1.2rem;
+    margin-left: -7px;
+    margin-top: -4px;
+	margin-bottom: 19px;
+}
+
+.baseSlider .servSlide .desc {
+    width: 97%;
+    font-size: 1.2rem;
+    line-height: 2.1;
+    margin-top: 11px;
+}
+
+
+/* ---- section / brand slider  ---- */
+
+
+/* Common */
+
+section.brand {
+	overflow: hidden;
+}
+
+section.brand .slick-list {
+    width: 180%;
+} 
+section.brand .top .learnMore {
+	display: none;
+}
+
+
+/* Brand-Slider */
+
+section.brand .under {
+	margin-top: 36px;
+}
+.brandList {
+	width: 83%;
+	margin:0 auto;
+	padding-top: 64px;
+    padding-bottom: 72px;
+    visibility: visible;
+}
+
+
+/* Brand-Detail */
+
+/*
+Image
+*/
+
+.brandDetail .image {
+	height: 65vw;
+}
+
+
+/*
+Cont
+*/
+
+.brandDetail .cont {
+	margin-top: 2.5em;
+}
+
+
+
+/* ---- section / Blog slider  ---- */
+
+/* Blog-Slider */
+
+.blogSlider {
+	margin-top: 40px;
+}
+.blogSlider .slick-list {
+    width: 180%;
+}
+
+/*
+Image
+*/
+
+.blogSlider .slide .image {
+	height: 63vw;
+}
+
+/*
+Cont
+*/
+
+.blogSlider .slide .cont {
+	margin-top: 27px;
+}
+.blogSlider .slide .cont .date {
+	font-size: 1.5rem;
+	margin-left: 2px;
+}
+.blogSlider .slide .cont .title {
+	font-size: 1.9rem;
+	line-height: 1.6;
+	margin-top: 7px;
+}
+.blogSlider .slide .cont .desc {
+	display: none;
+}
+.blogSlider .slide .cont .cat {
+	margin-top: 12px;
+	font-size: 1.1rem;
+	padding-bottom: 25px;
+}
+
+
+/* ---- section / ShopInfo  ---- */
+
+/* Top */
+
+section.shopInfo .top {
+	display: flex;
+	flex-direction: column;
+    align-items: initial;
+}
+section.shopInfo .learnMore {
+	display: none;
+}
+
+section.shopInfo .infoCont {
+	margin-left: initial;
+	margin-top: 32px;
+}
+section.shopInfo .infoCont address {
+	font-size: 1.6rem;
+	font-family: source-han-sans-japanese, sans-serif;
+	font-weight: 700;
+	line-height: 1.8;
+}
+section.shopInfo .infoCont .info {
+	font-size: 1.9rem;
+	flex-direction: column;
+	align-items: initial;
+	margin-top: 5px;
+}
+section.shopInfo .infoCont .info .open span {
+	font-size: 1.2rem;
+	letter-spacing: 0.03em;
+	margin-left: -1px;
+}
+section.shopInfo .infoCont .info .tel {
+	font-size: 1.9rem;
+	letter-spacing: -0.04em;
+}
+section.shopInfo .infoCont .info .tel:before {
+	content:"tel/fax :";
+	font-family:'DIN Next LT W01 Medium';
+	font-size: 1.3rem;
+	letter-spacing: 0;
+	margin-right: 2px;
+	transform: rotate(0);
+	width: initial;
+    height: initial;
+    display: inline-block;
+    background-color: initial;
+    position: initial;
+    left: initial;
+    top: initial;
+    transform: initial;
+}
+section.shopInfo .infoCont .info .tel a {
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+}
+section.shopInfo .infoCont .info .tel a:before {
+	content:"";
+  	position: absolute;
+  	bottom:2px;
+  	left: 0;
+  	width: 100%;
+  	z-index: -1;
+  	height: 5px;
+  	background-color: #c3df5f ;
+  	transform: scale(1, 1);
+}
+
+
+section.shopInfo .infoCont .info div + div {
+	padding-left: 0;
+	margin-top: 12px;
+}
+section.shopInfo .infoCont .info div + div:before {
+	content:none;
+}
+
+
+/* Map */
+
+section.shopInfo .under {
+	margin-top: 55px;
+}
+section.shopInfo .under .map {
+	margin-left: initial;
+	padding-left: 1vw;
+	width: Calc(100% - 8.2vw);
+	margin:0 auto;
+	padding-left: 6px;
+	height: 95vw;
+	filter: grayscale(1);
+}
+
+
+/*
+--------------------------------------
+  3-2. Learn More
+- - - - - - - - - - - - - - - - - - - 
+*/
+
+.learnMore {
+	font-size: 1.7rem;
+	margin-top: 1.3em;
+}
+
+
+/*
+--------------------------------------
+  3-4. Image Animation
+- - - - - - - - - - - - - - - - - - - 
+*/
+
+
+/* ---- before / mask  ---- */
+
+/* forService */
+
+body.addAnim .forService.animStart .slick-slide:nth-of-type(3) .slideImage:before {
+	-webkit-animation: slide 1.4s ease 0s forwards;
+  	animation: slide 1.4s ease 0s forwards;
+	animation-delay: 0s;
+}
+body.addAnim .forService.animStart .slick-slide:nth-of-type(4) .slideImage:before {
+	-webkit-animation: slide 1.4s ease 0s forwards;
+  	animation: slide 1.4s ease 0s forwards;
+	animation-delay: 0.2s;
+}
+body.addAnim .forService.animStart .slick-slide:nth-of-type(5) .slideImage:before {
+	-webkit-animation: slide 1.4s ease 0s forwards;
+  	animation: slide 1.4s ease 0s forwards;
+	animation-delay: 0.4s;
+}
+
+/* forBlog */
+
+body.addAnim .forBlog.animStart .slick-slide:nth-of-type(3) .slideImage:before {
+	-webkit-animation: slide 1.4s ease 0s forwards;
+  	animation: slide 1.4s ease 0s forwards;
+	animation-delay: 0s;
+}
+body.addAnim .forBlog.animStart .slick-slide:nth-of-type(4) .slideImage:before {
+	-webkit-animation: slide 1.4s ease 0s forwards;
+  	animation: slide 1.4s ease 0s forwards;
+	animation-delay: 0.2s;
+}
+body.addAnim .forBlog.animStart .slick-slide:nth-of-type(5) .slideImage:before {
+	-webkit-animation: slide 1.4s ease 0s forwards;
+  	animation: slide 1.4s ease 0s forwards;
+	animation-delay: 0.4s;
+}
+body.addAnim .forBlog.animStart .slick-slide:nth-of-type(6) .slideImage:before {
+	-webkit-animation: slide 1.4s ease 0s forwards;
+  	animation: slide 1.4s ease 0s forwards;
+	animation-delay: 0.6s;
+}
+
+
+/* ---- after / mask  ---- */
+
+.slideImage:after {
+	transition-delay: 0.7s;
+}
+
+
+
+/* 
+---------------------------------------------------
+  4. Index
+---------------------------------------------------
+*/
+
+
+/*
+-------------------------------------
+  4-1. Mv / Section
+- - - - - - - - - - - - - - - - - - - 
+*/
+
+
+/* ---- common ---- */
+
+section.mv {
+	height: 100vh;
+	max-height: initial;
+}
+
+/* ---- mvTxt ---- */
+
+.mvTxt {
+	font-size: 40.5vw;
+	left: 50.4%;
+}
+.mvTxt .right {
+	margin-left: 12px;
+}
+body.pace-done .mvTxt .right {
+    margin-top: 25vw;
+}
+
+
+/* ---- mvVisual ---- */
+
+.mvVisual {
+	position: absolute;
+	z-index: 0;
+	right: 4.7%;
+	bottom:3.3%;
+	width: 69vw;
+	height: 76%;
+
+	opacity: 0.9;
+}
+.mvVisual .slide {
+	clip: rect(0,69vw,79vh,0);
+}
+.mvVisual .slide.rect {
+	clip: rect(0,0vw,79vh,0);
+}
+
+
+/*
+-------------------------------------
+  4-2. Band / Section
+- - - - - - - - - - - - - - - - - - - 
+*/
+
+/* ---- common ---- */
+
+section.band {
+	display: none;
+}
+
+
+
+/* 
+---------------------------------------------------
+  5. Under
+---------------------------------------------------
+*/
+
+
+/*
+-------------------------------------
+  5-1. uderMv / Section
+- - - - - - - - - - - - - - - - - - - 
+*/
+
+/* ---- title ---- */
+
+/*
+common
+*/
+
+section.underMv .title {
+	font-size: 37vw;
+	padding-top: 37.2vw;
+}
+
+
+/* ---- underNav ---- */
+
+/* base */
+
+nav.underNav ul {
+	margin-top: 30px;
+}
+nav.underNav ul li {
+	font-size: 1.5rem;
+    letter-spacing: 0.02em;
+    padding: 0 0.9em;
+}
+nav.underNav ul li:before {
+	width: 1px;
+	height: 52%;
+	top: 44%;
+}
+nav.underNav ul li:last-child:after {
+	width: 1px;
+	height: 52%;
+	top: 44%;
+}
+
+
+/*
+forShop
+*/
+
+nav.underNav.forShop {
+	justify-content: center;
+	margin:35px auto 0;
+	display: none;
+}
+
+
+
+/* ---- underVisual ---- */
+
+/* base */
+
+/*
+common
+*/
+
+.underVisual {
+	width: 85%;
+	height: 83vw;
+	margin:58px auto 10px;
+}
+
+/* dots */
+
+.underVisual .slick-dots {
+	display: none !important;
+}
+
+
+/*
+-------------------------------------
+  5-2. imageRand / Section
+- - - - - - - - - - - - - - - - - - - 
+*/
+
+/* ---- common ---- */
+
+section.sect + section.imageRand {
+	margin-top: 0px;
+	display: none;
+}
+
+
+/* ---- image ---- */
+
+section.imageRand .image.firstImage {
+	height: 70vw;
+	width: 73vw;
+}
+section.imageRand .image.secondImage {
+	height: 63vw;
+	width: 67vw;
+	margin-left: auto;
+	margin-top: 100px;
+}
+
+
+/*
+-------------------------------------
+  5-3. aboutSelect / Section
+- - - - - - - - - - - - - - - - - - - 
+*/
+
+/* ---- common ---- */
+
+section.aboutSelect {
+	margin-bottom: 20vw;
+}
+
+/*
+serviceSelect
+*/
+
+section.aboutSelect.serviceSelect + section.aboutSelect.serviceSelect {
+	padding-top: 5px;
+	margin-bottom: 24vw;
+}
+
+section.sect + section.aboutSelect:before {
+	margin-left: 0.7%;
+}
+
+section.aboutSelect .selectInner {
+    margin-left: 6px;
+}
+section.aboutSelect .selectInner > ul {
+	flex-direction: column;
+	width: 86%;
+}
+
+section.aboutSelect .selectInner:before {
+	content:none;
+}
+
+
+/* ---- aboutSlide ---- */
+
+/*
+common
+*/
+
+li.aboutSlide {
+	width: 100%;
+	transition: all ease .35s;
+}
+li.aboutSlide + li {
+	margin-left: 0%;
+	margin-top: 21vw;
+}
+
+section.serviceSelect:nth-child(2) .aboutSlide:nth-child(1) .slideImage:before
+ {
+	width: 0;
+}
+section.serviceSelect:nth-child(2) .aboutSlide:nth-child(1) .slideImage:after {
+	width: 100%;
+	transform: scale(1, 1);
+	height: 100%;	
+	-webkit-transition: 0.9s cubic-bezier(.6,0,.25,1);
+    transition: 0.9s cubic-bezier(.6,0,.25,1);
+}
+body.addAnim section.serviceSelect:nth-child(2) .aboutSlide:nth-child(1) .slideImage:after {
+	height: 0%;
+}
+
+body.addAnim section.serviceSelect:nth-child(2) .aboutSlide:nth-child(1) .slideImage figure {
+    transition-delay: 0.3s;
+}
+
+
+/*
+image
+*/
+
+li.aboutSlide .image {
+    height: 80vw;
+}
+
+
+/*
+cont
+*/
+
+.aboutSlide .cont {
+	width: 83%;
+	margin:45px auto 0;
+}
+.aboutSlide .title {
+	font-size: 4.8rem;
+	letter-spacing: -0.01em;
+}
+.aboutSlide .title a {
+	display: block;
+    align-items: initial;
+}
+.aboutSlide .title.prepare a:after {
+	display: block;
+    font-size: 1.2rem;
+    margin-left: -7px;
+    margin-top: -4px;
+    margin-bottom: 14px;
+}
+
+.aboutSlide .subTitle {
+	font-size: 1.2rem;
+	letter-spacing: 0.01em;
+	margin-top: -3px;
+}
+
+.aboutSlide .desc {
+	width: 100%;
+	font-size: 1.2rem;
+	line-height: 2.1;
+	margin-top: 20px;
+}
+
+
+/*
+-------------------------------------
+  5-4. Gallery / Section
+- - - - - - - - - - - - - - - - - - - 
+*/
+
+/* ---- common ---- */
+
+section.gallery .slick-list {
+    width: 180%;
+}
+
+section.gallery .galleryList:before {
+	top: 14vw;
+	height: 100%;
+}
+
+
+
+/* ---- iamge ---- */
+
+section.gallery .slick-slide + .slick-slide {
+    margin-left: 34px;
+}
+
+.galleryImg {
+	height: 67vw;
+}
+section.gallery .slick-slide.slick-current + .slick-slide {
+	margin-top: 13vw;
+	margin-bottom: 0vw;
+}
+section.gallery .slick-slide.slick-current + .slick-slide + .slick-slide  + .slick-slide {
+	margin-top: 13vw;
+	margin-bottom: 0vw;
+}
+
+
+/* 
+---------------------------------------------------
+  6. Brand
+---------------------------------------------------
+*/
+
+/*
+-------------------------------------
+  6-1. Archive / Section
+- - - - - - - - - - - - - - - - - - - 
+*/
+
+/* ---- common ---- */
+
+section.brandArchive {
+	width: 88%;
+	margin:65px auto 0;
+}
+
+ul.brandArchList {
+	padding-top: 7.3vw;
+	padding-bottom: 9vw;
+}
+
+
+
+/* ---- brandArchBtn ---- */
+
+ul.brandArchList li.brandArchBtn {
+	width: 100%;
+}
+
+/* Brand-Detail */
+
+ul.brandArchList .brandArchBtn + .brandArchBtn {
+	margin-left: 0;
+}
+
+.brandArchBtn {
+	margin-bottom: 14vw;
+}
+
+
+/*
+Image
+*/
+
+.brandArchBtn .image {
+	height: 68.5vw;
+}
+
+
+/*
+Cont
+*/
+
+.brandArchBtn .cont {
+	margin-top: 2.6em;
+}
+.brandArchBtn .cont .title .eng {
+	font-size: 4.4rem;
+}
+
+
+/*
+-------------------------------------
+  6-2. Detail / Section
+- - - - - - - - - - - - - - - - - - - 
+*/
+
+/* ---- common ---- */
+
+section.brandSingle {
+	width: 87%;
+	padding-top: 37.6vw;
+	padding-left: 6px;
+}
+
+
+/* ---- title ---- */
+
+section.brandSingle .title {
+	font-size: 15.1vw;
+	letter-spacing: -0.01em;
+}
+section.brandSingle .title span {
+	font-size: 1.2rem;
+	letter-spacing: 0.09em;
+	margin-top: -1px;
+}
+
+
+/* ---- main image ---- */
+
+section.brandSingle .singleImg {
+    border: 1px solid #000000;
+    margin-top: 16vw;
+    box-shadow: 0px 0px 8px -1px rgba(0.3,0,0,0.25);
+}
+
+
+/* ---- cont ---- */
+
+section.brandSingle .singleCont {
+	margin-top: 9px;
+	border: 0px solid #e8e8e8;
+}
+section.brandSingle .singleCont > .inner {
+	padding:5.8vw 3vw;
+}
+section.brandSingle .singleCont .cont {
+	font-size: 1.35rem;
+	line-height: 2;
+	letter-spacing: 0em;
+	text-align: justify;
+}
+
+
+/* ---- url ---- */
+
+section.brandSingle .url {
+	font-size: 1.4rem;
+	letter-spacing: -0.03em;
+	margin-top: 26px;
+	margin-bottom: 33px;
+}
+section.brandSingle .url:before {
+	font-size: 1.6rem;
+	margin-right: 4px;
+}
+section.brandSingle .url a:before,
+section.brandSingle .url a:after {
+	height: 3px;
+}
+
+/* ---- brandBlog ---- */
+
+/*
+common
+*/
+
+.brandBlog {
+	margin-top: 64px;
+	border-radius: 6px;
+}
+.brandBlog > .inner{
+	flex-direction: column;
+	padding:0;
+}
+
+/*
+image -right
+*/
+
+.brandBlog .right {
+	order:1;
+	width: 100%;
+}
+.brandBlog .image {
+	height: 53vw;
+	border-radius: 3px 3px 0 0;
+}
+
+/*
+cont -left
+*/
+
+.brandBlog .left {
+	order:2;
+	width: 78%;
+	margin: 27px auto 45px;
+}
+.brandBlog .cat {
+	font-size: 1rem;
+}
+
+.brandBlog .blogTitle {
+	font-size: 1.8rem;
+	margin-top: 11px;
+	line-height: 1.6;
+	transition: all ease .35s;
+}
+
+.brandLearn {
+	font-size: 1.4rem;
+}
+
+
+
+
+/* ---- prev/next ---- */
+
+/*
+common
+*/
+
+.prevNext > .inner {
+	padding:28px 8px;
+}
+
+/*
+arrow
+*/
+
+.arrowBtn {
+	font-size: 2.3rem;
+	letter-spacing: 0.02em;
+}
+.arrowBtn span {
+	display: block;
+	font-size: 1rem;
+	margin-top: -5px;
+}
+
+.nextBtn .arrowInner:before {
+	content:"《";
+	font-size: 2rem;
+	color:#fff;
+	margin-right: 13px;
+}
+
+.prevBtn .arrowInner:after {
+	content:"》";
+	font-size: 2.1rem;
+	color:#fff;
+	margin-left: 13px;
+}
+
+
+/* 
+---------------------------------------------------
+  7. Blog
+---------------------------------------------------
+*/
+
+/*
+-------------------------------------
+  7-1. Common / BlogSection
+- - - - - - - - - - - - - - - - - - - 
+*/
+
+/* ---- taxTitle ---- */
+
+.taxTitle {
+    font-size: 15.8vw;
+	letter-spacing: -0.03em;
+	padding-top: 38vw;
+}
+.taxTitle span {
+    font-size: 1.4rem;
+    letter-spacing: 0.1em;
+    margin-top: -1px;
+    margin-bottom: 35px;
+}
+
+
+
+/* ---- nav ---- */
+
+.underMv .catChildNav .pc {
+	display: none;
+}
+.underMv .catChildNav .sp {
+	display: block;
+}
+
+.underMv .catChildNav .catChild {
+	display: none;
+}
+
+.underMv .catChildNav select {
+	font-family: 'DIN Next W01 Cn Medium',source-han-sans-japanese, sans-serif;
+	border:none;
+	height: inherit;
+    margin-top: 0px;
+    outline: none;
+    font-size: inherit;
+    text-transform: uppercase;
+	width:47px;
+	padding: 0;
+	position: relative;
+	display: inline-block;
+	appearance: none; 
+	-webkit-appearance: none;
+	background: #fff;
+}
+.underMv .catChildNav select option {
+	font-weight: bold !important;
+	text-overflow: ellipsis;
+}
+
+body.selectJpn .underMv .catChildNav select {
+	font-size: 1.2rem !important;
+	line-height: 1.6;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+
+
+/* ---- contents ---- */
+
+section.blogSection {
+	width: 86.5%;
+	margin: 58px auto 42px;
+	flex-direction: column;
+	padding-left: 6px;
+}
+section.blogSection .container {
+	width: 100%;
+}
+
+
+/* ---- aside ---- */
+
+/* common */
+
+section.blogSection aside {
+	position: relative;
+	width: 100%;
+	display: none;
+}
+
+
+
+/*
+-------------------------------------
+  7-2. BlogList
+- - - - - - - - - - - - - - - - - - - 
+*/
+
+/* ---- common ---- */
+
+/* common */
+
+li.blogCont {
+	display: inline-block;
+	width: 47.8%;
+	vertical-align: top;
+	margin-bottom: 13.2vw;
+	transition: all ease .35s;
+}
+li.blogCont {
+	margin-left: 3.5%;
+}
+
+
+/* image */
+
+li.blogCont .image {
+	height: 38vw;
+	overflow: hidden;
+}
+
+/* cont */
+
+li.blogCont .cont {
+    margin-top: 23px;
+    width: 100%;
+}
+li.blogCont .cont .date {
+	font-size: 1.3rem;
+    letter-spacing: -0.02em;
+}
+li.blogCont .cont .title {
+	font-size: 1.5rem;
+	margin-top: 6px;
+}
+li.blogCont .cont .desc {
+	font-size: 1.2rem;
+    line-height: 1.9;
+    margin-top: 16px;
+}
+li.blogCont .cont .cat {
+	font-size: 1rem;
+	margin-top: 11px;
+}
+
+
+/* ---- taxList ---- */
+
+.taxList li.blogCont {
+	margin-bottom: 8vw;
+    padding-bottom: 8vw;
+    border-bottom: 1px solid #e7e7e7;
+}
+.taxList li.blogCont:nth-child(1) {
+    padding-top: 8vw;
+}
+li.blogCont:last-child {
+	margin-bottom: 45px;
+}
+ul.catArea + .taxList li.blogCont:nth-child(1) {
+    padding-top: 5.2vw;
+}
+
+
+.taxList li.blogCont .image {
+    height: 31.3vw;
+    width: 38%;
+    margin-left: 0.1vw;
+}
+
+.taxList li.blogCont .cont {
+    width: 55%;
+    margin-left: 8.2%;
+}
+.taxList li.blogCont .cont .title {
+	font-size: 1.55rem;
+	line-height: 1.55;
+}
+.taxList li.blogCont .cont .desc {
+	display: none;
+}
+
+
+
+/* ---- Slider ---- */
+
+/*
+common
+*/
+
+ul.pickSlider {
+	padding-top: 5px;
+	margin-bottom: 36px;
+}
+ul.pickSlider li.blogCont .image {
+	height: 74.5vw;
+}
+
+ul.pickSlider li.blogCont .cont {
+	margin-top: 23px;
+}
+ul.pickSlider li.blogCont .cont .title {
+	font-size: 1.9rem;
+	line-height: 1.5;
+}
+
+/*
+arrow
+*/
+
+ul.pickSlider .slick-arrow {
+	display: none !important;
+}
+
+/*
+dots
+*/
+
+ul.pickSlider .slick-dots {
+	bottom:8px;
+}
+ul.pickSlider .slick-dots li + li {
+	margin-left: 2px;
+}
+ul.pickSlider .slick-dots li button {
+	width: 30px;
+}
+
+
+
+/* ---- catArea ---- */
+
+/*
+common
+*/
+
+ul.catArea {
+	border-bottom: 0px solid #000;
+}
+
+ul.catArea  li.blogCont {
+	padding-bottom: 64px;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+ul.catArea  li.blogCont .image {
+	height: 77vw;
+}
+
+ul.catArea  li.blogCont .cont {
+	margin: 44px auto 0;
+	width: 85%;
+}
+ul.catArea  li.blogCont .cont .title {
+	font-size: 2.2rem;
+}
+ul.catArea  li.blogCont .cont .title span {
+	font-size: 1.5rem;
+	letter-spacing: -0.01em;
+}
+ul.catArea li.blogCont .cont .title span span:before {
+	bottom: 5px;
+}
+
+
+/* ---- Pagenation ---- */
+
+.pagenation {
+	margin-top: -16px;
+	padding-bottom: 0px;
+}
+.page-numbers {
+	font-size: 1.8rem;
+	width: 52px;
+	height: 52px;
+	line-height: 51px;
+}
+
+
+/*
+-------------------------------------
+  7-3. BlogArticle
+- - - - - - - - - - - - - - - - - - - 
+*/
+
+/* ---- common ---- */
+
+body.blogSingle section.blogSection {
+	padding-top: 131px;
+}
+
+
+/* ---- articleHead ---- */
+
+/* cont */
+
+.articleHead {
+	padding-bottom: 0px;
+	border-bottom: 0px;
+}
+.articleHead .cont {
+	width: 90%;
+	margin:0 auto;
+}
+.articleHead .date {
+    font-size: 1.4rem;
+    letter-spacing: -0.03em;
+    margin-left: 0px;
+}
+.articleHead .title {
+	font-size: 2rem;
+	line-height: 1.4;
+	margin-top: 6px;
+	margin-left: -2px;
+}
+.articleHead .cat {
+	font-size: 1.1rem;
+    letter-spacing: 0.03em;
+    margin-top: 11px;
+    padding-bottom: 0px;
+}
+
+
+/* ---- article ---- */
+
+/* common */
+
+.blogSection article {
+	width: 97%;
+	margin: 3px auto 0;
+    border-top: 0px solid #000;
+    padding-top: 25px;
+}
+
+
+/* - - midashi - - */
+
+article .midashi {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    width: 93%;
+    margin:7px auto 0;
+}
+
+/*
+margin
+*/
+
+article .caption + .midashi {
+	margin-top: 1.6em;
+}
+article img + .midashi {
+	margin-top: 1.6em;
+}
+article .desc + .midashi {
+	margin-top: 1.6em;
+}
+
+
+
+
+/* - - desc - - */
+
+article .desc {
+	text-align: justify;
+	width: 93%;
+	margin:0 auto;
+}
+article .desc p {
+	font-size: 1.4rem;
+	line-height: 1.9;
+}
+
+/*
+margin
+*/
+
+article .midashi + .desc {
+	margin-top: 1.5em;
+}
+article .caption + .desc {
+	margin-top: 3em;
+}
+article img + .desc {
+	margin-top: 2.8em;
+}
+.grayBg + .desc {
+	margin-top: 2.8em;
+}
+
+
+/* - - image - - */
+
+article img {
+	width: 104%;
+	margin-left: -2%;
+}
+article .caption {
+	font-size: 1.1rem;
+	line-height: 1.7;
+	margin-top: 0.7em;
+	margin-left: 0.1%;
+	width: 104%;
+	margin-left: -2%;
+}
+
+/*
+margin
+*/
+
+article .midashi + img {
+	margin-top: 33px;
+}
+article .desc + img {
+	margin-top: 48px;
+}
+.grayBg + img {
+	margin-top: 48px;
+}
+
+
+/* - - iframe - - */
+
+article iframe {
+	width: 100% !important;
+    height: 60vw;
+}
+
+
+/*
+margin
+*/
+
+article .midashi + iframe {
+	margin-top: 33px;
+}
+article .desc + iframe {
+	margin-top: 40px;
+}
+.grayBg + iframe {
+	margin-top: 40px;
+}
+
+
+
+
+/* - - grayBg - - */
+
+.grayBg {
+	background-color: #f0f0f0;
+	padding:3.2em 3.1em 6rem;
+}
+.grayMidashi {
+	font-family: source-han-sans-japanese, sans-serif;
+    font-size: 1.7rem;
+    line-height: 1.7;
+}
+.grayTxt {
+	font-size: 1.3rem;
+	line-height: 2;
+	text-align: justify;
+}
+.gray_url {
+	font-size: 1.4rem;
+	letter-spacing: -0.03em;
+}
+.gray_url a {
+	font-size: 1.2rem;
+}
+.gray_url a:before {
+	bottom:-6px;
+	height: 3px;
+}
+
+
+/*
+margin
+*/
+
+.grayMidashi + .grayTxt {
+	margin-top: 1.3em;
+}
+.grayTxt + .gray_url {
+	margin-top: 0.6em;
+}
+
+article .desc + .grayBg {
+    margin-top: 40px;
+}
+
+
+/* ---- share ---- */
+
+.share {
+	font-size: 1.5rem;
+    letter-spacing: 0.03em;
+    border-top: 1px solid #c8c8c8;
+	margin-top: 54px;
+	padding-top: 25px;
+	margin-left: 0%;
+	padding-left: 2.6%;
+}
+
+ul.blogShare li {
+	font-size: 2.1rem;
+}
+ul.blogShare li + li {
+	margin-left: 12px;
+}
+
+
+/* ---- blogNav ---- */
+
+/*
+common
+*/
+
+.blogNav {
+	margin-top: 19px;
+	border-top: 4px solid #000;
+	border-bottom: 1px solid #000;
+}
+.blogNav > .inner {
+	padding:27px 0px;
+}
+
+/*
+arrow
+*/
+
+.blogArrow {
+	font-size: 1.3rem;
+	line-height: 1.6;
+	letter-spacing: 0.02em;
+
+}
+.blogArrow a {
+	display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+}
+
+/* ---- Related ---- */
+
+/* common */
+
+.related {
+	margin-bottom: 0px;
+}
+
+
+/* relateList */
+
+/*
+common
+*/
+
+.relateCont {
+	margin-top: 7vw;
+	padding-bottom: 7vw;
+}
+
+/*
+image
+*/
+
+.relateCont .image {
+	height: 30.9vw;
+	width: 38%;
+    margin-left: 0.1vw;
+}
+
+/*
+cont
+*/
+
+.relateCont .cont {
+	width: 55%;
+    margin-left: 8.2%;
+}
+.relateCont .cont .date {
+    font-size: 1.2rem;
+    letter-spacing: -0.02em;
+}
+.relateCont .cont .title {
+	font-size: 1.55rem;
+    line-height: 1.55;
+    margin-top: 6px;
+}
+.relateCont .cont .cat {
+	font-size: 1rem;
+    margin-top: 8px;
+}
+
+
+/* 
+---------------------------------------------------
+  8. Shop Info
+---------------------------------------------------
+*/
+
+/*
+-------------------------------------
+  8-1. Common
+- - - - - - - - - - - - - - - - - - - 
+*/
+
+/* ---- infoSect ---- */
+
+section.infoSect {
+	text-align: center;
+	padding-top: 54px;
+}
+section.infoSect + .infoSect {
+	margin-top: 15px;
+	padding-top: 55px;
+}
+section.infoSect + #access {
+	margin-top: 48px;
+}
+
+section.infoSect > .inner {
+	width: 84%;
+	margin:0 auto;
+}
+
+
+/* ---- title ---- */
+
+section.infoSect .title {
+	font-size: 3.6rem;
+	font-family: 'DIN Next W01 Cn Medium';
+	text-transform: uppercase;
+	letter-spacing: 0.01em;
+	font-weight: 500;
+	margin-bottom: 17px;
+}
+section.infoSect .title span:after {
+	bottom: 10px;
+}
+
+
+
+/*
+-------------------------------------
+  8-2. Schedule
+- - - - - - - - - - - - - - - - - - - 
+*/
+
+/* ---- common ---- */
+
+
+
+/* ---- open ---- */
+
+section.infoSect .open {
+	font-size: 2.1rem;
+	letter-spacing: -0.05em;
+}
+section.infoSect .open span {
+	font-size: 1.3rem;
+	letter-spacing: -0.01em;
+}
+
+
+/* ---- caution ---- */
+
+section.infoSect .caution {
+	font-size: 1rem;
+	margin-top: 8px;
+}
+
+
+/* ---- calender ---- */
+
+.calendar {
+	margin-top: 41px;
+	filter: grayscale(1);
+}
+.calendar iframe {
+	width: 100% !important;
+	height: 100vw !important;
+}
+
+
+/* ---- band ---- */
+
+section.infoSect#schedule .infoBand {
+	position: absolute;
+    width: 0%;
+    height: 100vw;
+    background-color: #000000;
+    z-index: -1;
+    right: 0;
+    bottom: -40px;
+    -webkit-transition: 1.0s cubic-bezier(.6,0,.25,1);
+    transition: 1.0s cubic-bezier(.6,0,.25,1);
+    transition-delay: 0.5s;
+}
+body.addAnim section.infoSect#schedule .calendar.active + .infoBand {
+	width: 99% !important;
+}
+
+
+/*
+-------------------------------------
+  8-3. Access
+- - - - - - - - - - - - - - - - - - - 
+*/
+
+/* ---- address ---- */
+
+section.infoSect address {
+	font-size: 1.5rem;
+	margin-top: -2px;
+}
+
+
+/* ---- tel ---- */
+
+section.infoSect .tel {
+	font-size: 1.65rem;
+	margin-top: 6px;
+}
+section.infoSect .tel:before {
+	content:"tel";
+	font-size: 1.3rem;
+}
+
+
+/* ---- GoogleMap ---- */
+
+.GoogleMap {
+	margin: 29px auto 0;
+	width: 230px;
+	height: 54px;
+}
+
+
+/* ---- mapArea ---- */
+
+.mapArea {
+	filter: grayscale(1);
+	margin-top: 54px;
+}
+.mapArea iframe {
+	width: 100% !important;
+	height: 77vw !important;
+}
+
+
+/*
+-------------------------------------
+  8-4. How to
+- - - - - - - - - - - - - - - - - - - 
+*/
+
+/* ---- howToBox ---- */
+
+.howToBox {
+	margin-top: 55px;
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+/* ---- dt ---- */
+
+/*
+common
+*/
+
+.howToBox dt {
+	padding: 23px 17px;
+	border-top: 2px solid #000;
+	cursor: pointer;
+	transition: all ease .35s;
+}
+
+.howToBox dt > .inner:after {
+    border-top: solid 2px #000;
+    border-right: solid 2px #000;
+    width: 7px;
+    height: 7px;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%) rotate(45deg);
+    transition: all ease .25s;
+}
+
+
+/*
+howTitle
+*/
+
+.howTitle .eng {
+	display: none;
+}
+.howTitle .jpn {
+	margin-top:1px ;
+	font-size: 1.5rem;
+	margin-left: 0;
+	padding-left: 0;
+}
+.howTitle .jpn:before {
+	content:none;
+}
+
+/* ---- dd ---- */
+
+/*
+common
+*/
+
+.howToBox dd .infoBox {
+	padding: 27px 0px 28px;
+}
+.howToBox dd .infoBox + .infoBox {
+    border-top: 1px dotted #ccc;
+    margin-top: 19px;
+}
+
+.howDesc {
+    font-size: 1.2rem;
+	letter-spacing: -0.02em;
+	line-height: 1.75;
+    margin-top: 0px;
+    padding:0 16px;
+}
+
+
+/*
+top
+*/
+
+.howToBox dd .top {
+	flex-direction: column;
+
+}
+.howToBox dd .infoTitle {
+	flex-direction: column;
+	font-size: 1.5rem;
+	margin-top: 7px;
+}
+
+.howToBox dd .icon {
+	display: none;
+}
+.howToBox dd .infoTitle .txt {
+	position: relative;
+	display: inline-block;
+}
+.howToBox dd .infoTitle .txt:after {
+	content:"";
+	display: inline-block;
+	width: 100%;
+	height: 1px;
+	position: absolute;
+	left: 0;
+	bottom:-7px;
+	background-color: #000;
+}
+
+.howToBox dd .duration {
+	font-size: 1.5rem;
+	margin:initial;
+	justify-content: center;
+	margin-top: 22px;
+}
+.howToBox dd .duration:before {
+    content: "所要時間";
+    font-size: 0.9rem;
+    letter-spacing: 0.07em;
+    padding: 1px 4px;
+    margin-right: 12px;
+    margin-top: 3px;
+}
+
+.howToBox dd .duration span.time span {
+    font-size: 1rem;
+}
+
+/*
+middle
+*/
+
+.howToBox dd .middle {
+	margin-top: 32px;
+}
+.howBox {
+	width: 100%;
+	margin-bottom: 0;
+}
+.howBox > .inner {
+	flex-direction: column;
+}
+.howBox .arrow {
+	font-size: 1.3rem;
+	margin-top: 2px;
+	margin-bottom: 5px;
+	margin-left: initial;
+	margin-right: initial;
+	text-align: center;
+	transform:rotate(90deg)
+}
+
+.howBox .box {
+	font-size: 1.2rem;
+    letter-spacing: 0.02em;
+	background-color: #000;
+	color:#fff;
+	padding:18px 22px 18px;
+	min-width: initial;
+	border-radius: 6px;
+	margin-bottom: 0;
+}
+
+.howBox .caution {
+	font-size: 1.2rem !important;
+    font-family: source-han-sans-japanese, sans-serif;
+	max-width: 100%;
+	margin-top: 8px !important;
+	margin-bottom: 0px;
+}
+
+/*
+under
+*/
+
+.howToBox dd .under {
+	margin-top: 28px;
+}
+.howGray {
+	display: inline-block;
+	background-color: #f0f0f0;
+	padding:31px 34px 40px;
+	margin-bottom: 0px;
+}
+.airport dd .infoBox:nth-child(3) .howGray {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.howGray .txt {
+	font-size: 1.2rem;
+	line-height: 1.7;
+	margin-left: 0em;
+}
+
+.howGray .url {
+	word-break: break-all;
+	font-size: 1.2rem;
+	letter-spacing: -0.02em;
+	margin-top: 6px;
+}
+.howGray .url:after {
+	content:none;
+
+}
+.howGray .url a {
+	display: inline-block;
+	word-break: break-all;
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+
+/* 
+---------------------------------------------------
+  9. Contact
+---------------------------------------------------
+*/
+
+/* ---- contactDesc ---- */
+
+/* common */
+
+section.contactDesc {
+	width: 83.5%;
+	margin-top: 35px;
+	border-top: 1px solid #ccc;
+}
+section.contactDesc > .inner {
+	width: 94%;
+	margin:30px auto 53px;
+}
+
+/* cont */
+
+section.contactDesc .desc {
+	font-size: 1.2rem;
+	line-height: 2.2;
+	letter-spacing: 0em;
+}
+
+.contactList {
+	flex-direction: column;
+	margin-top: 18px;
+	font-size: 1.6rem;
+}
+.contactList li.tel:before {
+	font-size: 1.3rem;
+	margin-right: 4px;
+}
+.contactList li.mail:before {
+	font-size: 1.3rem;
+	margin-right: 4px;
+}
+.contactList li + li {
+	margin-left: initial;
+	margin-top: 10px;
+}
+.contactList li + li:after {
+	content:none;
+}
+
+.contactList li a:before,
+.contactList li a:after {
+	height: 3px;
+}
+
+
+/* ---- contactForm ---- */
+
+/* common */
+
+section.contactForm {
+	width: 84.5%;
+	margin:35px auto 50px;
+}
+
+
+/* form */
+
+.formList + .formList {
+	margin-top: 22px;
+}
+.formList + .confirm {
+	margin-top: 8px;
+}
+
+.formList .sub {
+	font-size: 1.2rem;
+	margin-bottom: 11px;
+}
+.formList .sub.req:after {
+	font-size: 0.9rem;
+}
+
+.formList input {
+	font-size: 1.2rem;
+	width: calc(100% - 40px);
+	padding: 19px 20px;
+}
+
+.formList textarea {
+	width: calc(100% - 40px);
+	padding: 19px 20px;
+	height: 15em;
+}
+
+
+
+/* policy */
+
+/*
+common
+*/
+
+.privacy {
+	border:1px solid #ccc;
+	border-radius: 3px;
+	height: 255px;
+}
+.privacy .frame {
+  	width: 97.3%;
+  	height: 235px;
+  	margin:10px auto;
+
+}
+.privacy .frame > .inner {
+	padding:22px 29px 30px;
+}
+
+
+/*
+scrollBar
+*/
+
+/*スクロールバーの横幅指定*/
+.privacy .frame::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+/*
+cont
+*/
+
+.privacy .lead {
+	font-size: 1.2rem;
+}
+.privacy .lead:nth-child(1) {
+	font-size: 1.25rem;
+}
+.privacy .desc {
+	font-size: 1.1rem;
+	line-height: 2;
+	margin-top: 12px;
+}
+.privacy .desc:nth-child(2) {
+	padding-bottom: 23px;
+	margin-bottom: 23px;
+	border-bottom: 1px dotted #ccc;
+}
+
+.privacy .desc + .lead {
+	margin-top: 20px;
+}
+
+
+/*
+accept
+*/
+
+.accept {
+	margin-top: 15px;
+}
+.acceptTxt {
+  	font-size: 1.2rem;
+  	left: 20px;
+}
+span.wpcf7-list-item-label {
+  	height: 12px;
+  	width: 12px;
+  	border-radius: 3px;
+  	margin-top: 6px;
+}
+span.wpcf7-list-item-label::before {
+    width: 6px;
+    height: 6px;
+}
+
+
+/* btnList */
+
+.btnList {
+	margin-top: 23px;
+}
+.btnList input {
+	font-size: 1.3rem;
+}
+
+
+/* error */
+
+.wpcf7 form .wpcf7-response-output {
+	font-size: 1.2rem;
+    letter-spacing: -0.02em;
+    line-height: 1.9;
+    margin-top: 22px;
+    background-color: rgba(0,0,0,0.05);
+    padding:23px 30px;
+}
+.wpcf7-not-valid-tip {
+	display: none;
+}
+
+
+/* confirm */
+
+/*
+Message
+*/
+
+.confirmMessage .messTitle {
+	font-size: 1.7rem;
+}
+.confirmMessage .messDesc {
+	margin-top: 18px;
+	font-size: 1.2rem;
+    line-height: 2.2;
+    letter-spacing: 0em;
+	margin-bottom: 31px;
+}
+
+
+
+/*
+--
+*/
+}
