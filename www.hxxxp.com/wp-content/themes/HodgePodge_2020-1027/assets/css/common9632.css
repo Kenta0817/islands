@@ -3021,7 +3021,6 @@ section.mv {
 	font-size: 32vw;
 	font-family: rama-gothic-c, sans-serif;
 	font-weight: 600; /* Semi-Bold */
-	letter-spacing: 0.015em;
 	text-transform: uppercase;
 	position: absolute;
 	top: 55.5%;
@@ -7117,6 +7116,11 @@ input.wpcf7c-conf:focus {
 
 form.custom-wpcf7c-confirmed .formList.confirm {
 	display: none;
+}
+
+.inner .title img{
+	width: 500px;
+	top:0px;
 }
 
 
