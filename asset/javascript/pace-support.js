@@ -22,7 +22,7 @@
 
 Pace.on('done', function(){
   setTimeout(function(){
-    $('body').addClass('addAnim');
+    jQuery('body').addClass('addAnim');
   },1400);
 });
 
@@ -31,10 +31,10 @@ Pace.on('done', function(){
 
 Pace.on('done', function(){
    setTimeout(function(){
-    $('.baseSlider').addClass('triger');
-    $('.blogSlider').addClass('triger');
-    $('section.aboutSelect').addClass('triger');
-    $('.galleryList').addClass('triger');
+    jQuery('.baseSlider').addClass('triger');
+    jQuery('.blogSlider').addClass('triger');
+    jQuery('section.aboutSelect').addClass('triger');
+    jQuery('.galleryList').addClass('triger');
   },1500);
 });
 
@@ -43,8 +43,8 @@ Pace.on('done', function(){
 
 Pace.on('done', function(){
   setTimeout(function(){
-    $('.mvTxt').addClass('remDelay');
-    $('.title__bottom').addClass('remDelay');
+    jQuery('.mvTxt').addClass('remDelay');
+    jQuery('.title__bottom').addClass('remDelay');
   },4000);
 });
 
@@ -61,7 +61,7 @@ Pace.on('done', function(){
 
 Pace.on('done', function(){
   setTimeout(function(){
-    $('.slide').addClass('remDelay');
+    jQuery('.slide').addClass('remDelay');
   },3100);
 });
 
@@ -75,61 +75,61 @@ setTimeout(function(){
   setInterval(function() {
     switch(flg){
       case 1:　//2枚目を見せる
-                    $('.slide.one').addClass('rect');
-                    $('.slide.one').addClass('scale');
-                    $('.slide.two').removeClass('scale');
+                    jQuery('.slide.one').addClass('rect');
+                    jQuery('.slide.one').addClass('scale');
+                    jQuery('.slide.two').removeClass('scale');
                     setTimeout(function(){
-                      $('.slide.one').removeClass('zIndex2');
-                      $('.slide.two').removeClass('zIndex1');
-                      $('.slide.three').removeClass('zIndex0');
+                      jQuery('.slide.one').removeClass('zIndex2');
+                      jQuery('.slide.two').removeClass('zIndex1');
+                      jQuery('.slide.three').removeClass('zIndex0');
 
-                      $('.slide.one').addClass('zIndex0');
-                      $('.slide.two').addClass('zIndex2');
-                      $('.slide.three').addClass('zIndex1');
+                      jQuery('.slide.one').addClass('zIndex0');
+                      jQuery('.slide.two').addClass('zIndex2');
+                      jQuery('.slide.three').addClass('zIndex1');
                     },1000);
 
                     setTimeout(function(){
-                      $('.slide').removeClass('rect');
+                      jQuery('.slide').removeClass('rect');
                     },1500);
 
                     break;
 
       case 2:　//3枚目を見せる
-                    $('.slide.two').addClass('rect');
-                    $('.slide.two').addClass('scale');
-                    $('.slide.three').removeClass('scale');
+                    jQuery('.slide.two').addClass('rect');
+                    jQuery('.slide.two').addClass('scale');
+                    jQuery('.slide.three').removeClass('scale');
                     setTimeout(function(){
-                      $('.slide.two').removeClass('zIndex2');
-                      $('.slide.three').removeClass('zIndex1');
-                      $('.slide.one').removeClass('zIndex0');
+                      jQuery('.slide.two').removeClass('zIndex2');
+                      jQuery('.slide.three').removeClass('zIndex1');
+                      jQuery('.slide.one').removeClass('zIndex0');
 
-                      $('.slide.two').addClass('zIndex0');
-                      $('.slide.three').addClass('zIndex2');
-                      $('.slide.one').addClass('zIndex1');
+                      jQuery('.slide.two').addClass('zIndex0');
+                      jQuery('.slide.three').addClass('zIndex2');
+                      jQuery('.slide.one').addClass('zIndex1');
                     },1000);
 
                     setTimeout(function(){
-                      $('.slide').removeClass('rect');
+                      jQuery('.slide').removeClass('rect');
                     },1500);
 
                     break;
 
       case 3: //1枚目を見せる
-                    $('.slide.three').addClass('rect');
-                    $('.slide.three').addClass('scale');
-                    $('.slide.one').removeClass('scale');
+                    jQuery('.slide.three').addClass('rect');
+                    jQuery('.slide.three').addClass('scale');
+                    jQuery('.slide.one').removeClass('scale');
                     setTimeout(function(){
-                      $('.slide.three').removeClass('zIndex2');
-                      $('.slide.one').removeClass('zIndex1');
-                       $('.slide.two').removeClass('zIndex0');
+                      jQuery('.slide.three').removeClass('zIndex2');
+                      jQuery('.slide.one').removeClass('zIndex1');
+                       jQuery('.slide.two').removeClass('zIndex0');
 
-                      $('.slide.three').addClass('zIndex0');
-                      $('.slide.one').addClass('zIndex2');
-                       $('.slide.two').addClass('zIndex1');
+                      jQuery('.slide.three').addClass('zIndex0');
+                      jQuery('.slide.one').addClass('zIndex2');
+                       jQuery('.slide.two').addClass('zIndex1');
                     },1000);
 
                     setTimeout(function(){
-                      $('.slide').removeClass('rect');
+                      jQuery('.slide').removeClass('rect');
                     },1500);
 
                     break;
@@ -148,7 +148,7 @@ setTimeout(function(){
 
 Pace.on('done', function(){
   setTimeout(function(){
-    $('section.band').addClass('triger');
+    jQuery('section.band').addClass('triger');
   },2900);
 });
 
@@ -162,9 +162,8 @@ Pace.on('done', function(){
 
 
 /* --- 3-1. Slick / underVisual --- */
-
 Pace.on('done', function(){
-  $('.underVisual').slick({
+  jQuery('.underVisual').slick({
     dots: true,
     arrows: false,
     fade: true,
@@ -175,12 +174,13 @@ Pace.on('done', function(){
   })
     .on('beforeChange',function(event, slick, currentSlide, nextSlide){
   if(nextSlide > 0) { //スライド1枚目以外
-    $(this).slick('slickSetOption', 'autoplaySpeed', 3500, true);
+    jQuery(this).slick('slickSetOption', 'autoplaySpeed', 3500, true);
   } else { //2周目以降のスライド1枚目
-    $(this).slick('slickSetOption', 'autoplaySpeed', 3500, true);
+    jQuery(this).slick('slickSetOption', 'autoplaySpeed', 3500, true);
   }
   });
 });
+
 
 
 /* 
@@ -193,7 +193,7 @@ Pace.on('done', function(){
 /* --- 4-1. Slick / pickSlide --- */
 
 Pace.on('done', function(){
-  $('.pickSlider').slick({
+  jQuery('.pickSlider').slick({
     dots: true,
     arrows: true,
     fade: true,
@@ -203,9 +203,9 @@ Pace.on('done', function(){
   })
     .on('beforeChange',function(event, slick, currentSlide, nextSlide){
   if(nextSlide > 0) { //スライド1枚目以外
-    $(this).slick('slickSetOption', 'autoplaySpeed', 3500, true);
+    jQuery(this).slick('slickSetOption', 'autoplaySpeed', 3500, true);
   } else { //2周目以降のスライド1枚目
-    $(this).slick('slickSetOption', 'autoplaySpeed', 3500, true);
+    jQuery(this).slick('slickSetOption', 'autoplaySpeed', 3500, true);
   }
   });
 });
