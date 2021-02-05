@@ -7130,6 +7130,10 @@ form.custom-wpcf7c-confirmed .formList.confirm {
 	top:0px;
 }
 
+.address-container{
+	display: flex;
+}
+
 
 
 
