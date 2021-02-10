@@ -248,7 +248,7 @@ header .mainNav ul.main li a:after {
   width: 103%;
   z-index: -1;
   height: 4px;
-  background-color: #c3df5f ;
+  background-color: red ;
   transform: scale(0, 1);
   transform-origin: right top;
   transition: -webkit-transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1);
@@ -1622,8 +1622,9 @@ body.pace-done .title__top {
 	transition: all ease .3s !important;
 }
 
-.title_parent .title_anim:nth-child(1) .title__bottom {
+.left .title_anim:nth-child(1) .title__bottom {
 	transition-delay: 1.35s;
+	color: red;
 }
 .title_parent .title_anim:nth-child(2) .title__bottom {
 	transition-delay: 1.4s;
@@ -2047,16 +2048,16 @@ image
 
 
 .baseSlider .servSlide.shop .image figure {
-	background-image: url(../img/service/service_shop.jpg);
+	background-image: url(../img/service/service_01.jpg);
 }
 .baseSlider .servSlide.stay .image figure {
-	background-image: url(../img/service/service_stay.jpg);
+	background-image: url(../img/service/service_02.jpg);
 }
 .baseSlider .servSlide.rental .image figure {
-	background-image: url(../img/service/service_rental.jpg);
+	background-image: url(../img/service/service_03.jpg);
 }
 .baseSlider .servSlide.mtb .image figure {
-	background-image: url(../img/service/service_mtb.jpg);
+	background-image: url(../img/service/service_04.jpg);
 }
 
 
@@ -2102,9 +2103,6 @@ Preparation
 	font-size: 1.4rem;
 	letter-spacing: -0.03em;
 	margin-left: 10px;
-}
-.baseSlider .servSlide .title.prepare a:after {
-	content:"（ 準備中 ）";
 }
 
 
@@ -2633,7 +2631,7 @@ section.brand .top .learnMore a:hover {
   width: 103%;
   z-index: -1;
   height: 6px;
-  background-color: #c3df5f ;
+  background-color: red ;
   transform: scale(0, 1);
   transform-origin: left top;
   transition: -webkit-transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1);
@@ -2709,7 +2707,9 @@ section.brand .top .learnMore a:hover {
 
 
 /* ---- bottom  ---- */
-
+.first{
+	color:red;
+}
 .leadEng__bottom {
 	position: absolute;
 	display: inline-block;
@@ -7126,7 +7126,6 @@ form.custom-wpcf7c-confirmed .formList.confirm {
 /* --------------------------------------------- */
 .inner .title img{
 	position: relative;
-	width: 500px;
 	top:0px;
 }
 
