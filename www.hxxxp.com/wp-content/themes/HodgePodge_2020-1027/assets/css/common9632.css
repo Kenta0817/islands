@@ -367,7 +367,6 @@ header .mainNav nav.serviceSubNav ul > li a:after {
   width: 103%;
   z-index: 1;
   height: 4px;
-  background-color: #c3df5f ;
   transform: scale(0, 1);
   transform-origin: right top;
   transition: -webkit-transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1);
@@ -592,7 +591,7 @@ body.pace-done .humbBtn {
   	width: 100%;
   	z-index: -1;
   	height: 5px;
-  	background-color: #c3df5f ;
+  	background-color: red ;
   	transform: scale(0, 1);
   	transform-origin: right top;
   	transition: -webkit-transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1);
@@ -760,32 +759,32 @@ body.pace-done .humbBtn {
 	transform:scale(1.0);
 }
 .humbBg figure.common {
-	background-image: url(../img/humb/common.jpg);
+	background-image: url(../img/humb/top_03.jpg);
 }
 .humbBg figure.home {
-	background-image: url(../img/humb/home.jpg);
+	background-image: url(../img/humb/top_02.jpg);
 }
 .humbBg figure.service {
-	background-image: url(../img/humb/service.jpg);
+	background-image: url(../img/humb/store.jpg);
 }
 .humbBg figure.servTop {
 	background-image: url(../img/humb/service_top.jpg);
 }
 .humbBg figure.shop {
-	background-image: url(../img/humb/shop.jpg);
+	background-image: url(../img/humb/service_011.jpg);
 }
 .humbBg figure.stay {
-	background-image: url(../img/humb/stay.jpg);
+	background-image: url(../img/humb/service_021.jpg);
 }
 .humbBg figure.rental {
-	background-image: url(../img/humb/rental.jpg);
+	background-image: url(../img/humb/service_031.jpg);
 }
 .humbBg figure.mtb {
-	background-image: url(../img/humb/mtb.jpg);
+	background-image: url(../img/humb/service_03.jpg);
 }
 
 .humbBg figure.about {
-	background-image: url(../img/humb/about.jpg);
+	background-image: url(../img/humb/about_021.jpg);
 }
 .humbBg figure.blog {
 	background-image: url(../img/humb/blog.jpg);
@@ -2017,6 +2016,7 @@ common
 }
 .baseSlider .slick-slide:hover {
 	transform: translateY(0vw);
+	cursor: cell;
 }
 
 
@@ -3033,7 +3033,7 @@ section.mv {
 	transition-delay: 2.5s;
 }
 body.pace-done .mvTxt {
-	top: 55.5%;
+	top: 400px;
 }
 .mvTxt.remDelay {
 	transition-delay: 0s;
@@ -3067,7 +3067,7 @@ body.pace-done .mvTxt .right {
 	position: absolute;
 	z-index: 0;
 	right: 6.7%;
-	bottom:-22%;
+	bottom:-150px;
 	width: 44vw;
 	height: 39vw;
 	background-color: #ececec;
@@ -3320,7 +3320,7 @@ nav.underNav ul li .link:after
   width: 103%;
   z-index: -1;
   height: 5px;
-  background-color: #c3df5f ;
+  background-color: red ;
   transform: scale(0, 1);
   transform-origin: right top;
   transition: -webkit-transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1);
@@ -3438,13 +3438,13 @@ about
 */
 
 .underVisual.about .underSlide.one figure {
-	background-image: url(../img/about/about_01.jpg);
+	background-image: url(../img/about/about_011.jpg);
 }
 .underVisual.about .underSlide.two figure {
-	background-image: url(../img/about/about_02.jpg);
+	background-image: url(../img/about/about_021.jpg);
 }
 .underVisual.about .underSlide.three figure {
-	background-image: url(../img/about/about_03.jpg);
+	background-image: url(../img/about/about_031.jpg);
 }
 
 
@@ -3624,10 +3624,10 @@ section.imageRand .image figure {
 /* about */
 
 section.imageRand.about .image.firstImage figure {
-	background-image: url(../img/about/rand/about_rand_01.jpg);
+	background-image: url(../img/about/rand/about_rand_011.jpg);
 }
 section.imageRand.about .image.secondImage figure {
-	background-image: url(../img/about/rand/about_rand_02.jpg);
+	background-image: url(../img/about/rand/about_rand_021.jpg);
 }
 
 /* village */
@@ -3754,23 +3754,23 @@ li.aboutSlide.about .image figure {
 	background-image: url(../img/about/menu/about_top.jpg);
 }
 li.aboutSlide.owner .image figure {
-	background-image: url(../img/about/menu/about_owner.jpg);
+	background-image: url(../img/about/menu/philosophy.jpg);
 }
 li.aboutSlide.village .image figure {
-	background-image: url(../img/about/menu/about_village.jpg);
+	background-image: url(../img/about/menu/outline.jpg);
 }
 
 li.aboutSlide.shop .image figure {
-	background-image: url(../img/service/service_shop.jpg);
+	background-image: url(../img/service/service_011.jpg);
 }
 li.aboutSlide.stay .image figure {
-	background-image: url(../img/service/service_stay.jpg);
+	background-image: url(../img/service/service_021.jpg);
 }
 li.aboutSlide.rental .image figure {
-	background-image: url(../img/service/service_rental.jpg);
+	background-image: url(../img/service/service_031.jpg);
 }
 li.aboutSlide.mtb .image figure {
-	background-image: url(../img/service/service_mtb.jpg);
+	background-image: url(../img/service/service_041.jpg);
 }
 
 
@@ -3808,9 +3808,6 @@ cont
 	transition: all ease .35s;
 	display: flex;
     align-items: center;
-}
-.aboutSlide .title.prepare a:after {
-    content: "（ 準備中 ）";
 }
 .aboutSlide .title.prepare a:after {
     font-family: a-otf-midashi-go-mb31-pr6n, sans-serif;
@@ -6762,7 +6759,7 @@ section.contactDesc .desc {
   width: 100%;
   z-index: -1;
   height: 4px;
-  background-color: #c3df5f ;
+  background-color: red;
   transform: scale(1, 1);
   transform-origin: left top;
   transition: -webkit-transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1);
@@ -6782,7 +6779,7 @@ section.contactDesc .desc {
   width: 100%;
   z-index: -1;
   height: 4px;
-  background-color: #c3df5f ;
+  background-color: red ;
   transform: scale(0, 1);
   transform-origin: right top;
   transition: -webkit-transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1);
@@ -7023,7 +7020,8 @@ input.wpcf7c-conf-hidden + span.wpcf7-list-item-label::before {
 .btnList {
 	margin-top: 31px;
 }
-.btnList input {
+.btnList a {
+	display: block;
 	width: 101%;
 	font-family: source-han-sans-japanese, sans-serif;
   	font-weight: 700;
@@ -7035,6 +7033,7 @@ input.wpcf7c-conf-hidden + span.wpcf7-list-item-label::before {
 	color:#fff;
 	transition: all ease .25s;
 	outline: none;
+	text-align: center;
 }
 .btnList input.wpcf7-back {
 	background-color: #676767;
@@ -7132,6 +7131,12 @@ form.custom-wpcf7c-confirmed .formList.confirm {
 .address-container{
 	display: flex;
 }
+
+
+
+
+
+
 
 
 
