@@ -1870,7 +1870,6 @@ section.service {
 	padding-left: 9vw;
 	margin-left: 7%;
 	position: relative;
-	cursor: grab;
 }
 .baseSlider:before {
 	content:"";
@@ -2016,7 +2015,6 @@ common
 }
 .baseSlider .slick-slide:hover {
 	transform: translateY(0vw);
-	cursor: cell;
 }
 
 
@@ -2123,7 +2121,7 @@ section.blog  {
 	padding-left: 9vw;
 	margin-left: 7%;
 	position: relative;
-	cursor: grab;
+
 }
 .blogSlider:before {
     content: "";
@@ -2358,7 +2356,7 @@ body.addAnim section.brand .under.animStart:before {
     visibility: visible;
 }
 .brandList .slick-list {
-	cursor: grab;
+
 }
 
 
@@ -2372,6 +2370,7 @@ body.addAnim section.brand .under.animStart:before {
 	transform: translateY(0.5vw);
 	padding-bottom: 1vw;
 	transition: all ease .2s;
+	cursor: cell;
 }
 .brandDetail:hover {
 	transform: translateY(0vw);
@@ -2410,6 +2409,7 @@ Image
 	box-sizing: border-box;
 	border:3px solid #e8e8e8;
 	transition: all ease .25s;
+	pointer-events:none
 }
 .brandDetail:hover .image a {
 	border:3px solid #c3df5f;
@@ -2430,9 +2430,12 @@ Cont
 .brandDetail .cont {
 	margin-top: 2.9em;
 	text-align: center;
+	
 }
 .brandDetail .cont a {
 	color:#fff;
+	cursor: cell;
+	pointer-events:none
 }
 
 .brandDetail .cont .title .eng {
@@ -3845,7 +3848,6 @@ section.gallery .galleryList {
 	padding-left: 9vw;
     margin-left: 7%;
     position: relative;
-    cursor: grab;
 }
 section.gallery .slick-list {
     width: 100%;
@@ -4126,6 +4128,7 @@ Image
 	height: 100%;
 	background-size: cover;
 	background-position: center center;
+	cursor: cell;
 }
 
 
@@ -7130,6 +7133,10 @@ form.custom-wpcf7c-confirmed .formList.confirm {
 
 .address-container{
 	display: flex;
+}
+
+address.address_2 {
+    margin-left: 20px;
 }
 
 
