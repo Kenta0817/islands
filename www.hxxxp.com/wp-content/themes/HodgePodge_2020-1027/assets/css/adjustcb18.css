@@ -71,6 +71,11 @@ header .title {
 header .title img {
 	width: 250px;
 }
+
+body.pace-done .mvTxt {
+    top: 350px;
+}
+
 body.pace-done header .title {
 	opacity: 1;
 	top: 37px;
