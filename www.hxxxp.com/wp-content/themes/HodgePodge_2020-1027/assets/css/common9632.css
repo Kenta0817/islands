@@ -2412,7 +2412,7 @@ Image
 	pointer-events:none
 }
 .brandDetail:hover .image a {
-	border:3px solid #c3df5f;
+	border:3px solid red;
 }
 
 .logoSpace {
@@ -3040,7 +3040,7 @@ section.mv {
 	transition-delay: 2.5s;
 }
 body.pace-done .mvTxt {
-	top: 400px;
+	top: 530px;
 }
 .mvTxt.remDelay {
 	transition-delay: 0s;
@@ -3685,6 +3685,10 @@ section.aboutSelect .selectInner > ul {
 	display: flex;
 	width: 82%;
 	margin:0 auto;
+}
+
+.selectInner ul li .image a,.selectInner ul li .cont .title a{
+	cursor: cell;
 }
 
 section.aboutSelect .selectInner:before {

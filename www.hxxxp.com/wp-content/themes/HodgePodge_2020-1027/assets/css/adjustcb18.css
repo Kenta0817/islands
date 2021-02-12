@@ -69,7 +69,7 @@ header .title {
 	transition-delay: 2.7s;
 }
 header .title img {
-	width: 185px;
+	width: 250px;
 }
 body.pace-done header .title {
 	opacity: 1;
@@ -897,7 +897,7 @@ section.shopInfo .infoCont .info .tel a:before {
   	width: 100%;
   	z-index: -1;
   	height: 5px;
-  	background-color: #c3df5f ;
+  	background-color: red ;
   	transform: scale(1, 1);
 }
 
@@ -1022,7 +1022,7 @@ section.mv {
 /* ---- mvTxt ---- */
 
 .mvTxt {
-	font-size: 40.5vw;
+	font-size: 33vw;
 	left: 50.4%;
 }
 .mvTxt .right {
@@ -1101,8 +1101,8 @@ nav.underNav ul {
 }
 nav.underNav ul li {
 	font-size: 1.5rem;
-    letter-spacing: 0.02em;
-    padding: 0 0.9em;
+    letter-spacing: 0.01em;
+    padding: 0 0.5em;
 }
 nav.underNav ul li:before {
 	width: 1px;
@@ -1269,7 +1269,7 @@ cont
 }
 .aboutSlide .title {
 	font-size: 4.8rem;
-	letter-spacing: -0.01em;
+	letter-spacing: -0.06em;
 }
 .aboutSlide .title a {
 	display: block;
