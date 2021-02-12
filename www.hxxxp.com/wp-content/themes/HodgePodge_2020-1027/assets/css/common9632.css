@@ -1491,6 +1491,7 @@ nav.footSNS ul li a {
     align-items: center;
     justify-content: center;
     transition: all ease .35s;
+	z-index:100;
 }
 .toTop:hover {
 	background-color: rgba(255,255,255,1);
