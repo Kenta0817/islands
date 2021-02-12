@@ -205,6 +205,7 @@ body.loading.pace-running .loadTitle img {
   filter: blur(0px);
 }
 body.loading.pace-done .loadTitle img {
+  width: 400px;
   margin-top: -65px;
   opacity: 0;
   filter: blur(2px);
