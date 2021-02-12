@@ -69,7 +69,7 @@ header .title {
 	transition-delay: 2.7s;
 }
 header .title img {
-	width: 250px;
+	width: 200px;
 }
 
 body.pace-done .mvTxt {
@@ -78,7 +78,8 @@ body.pace-done .mvTxt {
 
 body.pace-done header .title {
 	opacity: 1;
-	top: 37px;
+	top: 20px;
+	left: -10px;
 }
 
 
@@ -874,7 +875,6 @@ section.shopInfo .infoCont .info .tel {
 	letter-spacing: -0.04em;
 }
 section.shopInfo .infoCont .info .tel:before {
-	content:"tel/fax :";
 	font-family:'DIN Next LT W01 Medium';
 	font-size: 1.3rem;
 	letter-spacing: 0;
