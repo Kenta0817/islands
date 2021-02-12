@@ -3030,7 +3030,7 @@ section.mv {
 	font-weight: 600; /* Semi-Bold */
 	text-transform: uppercase;
 	position: absolute;
-	top: 55.5%;
+	top: 65%;
 	left: 49%;
 	transform: translate(-50%,-50%);
 	display: flex;
