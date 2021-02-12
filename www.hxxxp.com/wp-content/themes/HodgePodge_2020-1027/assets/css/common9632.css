@@ -1132,7 +1132,7 @@ body.pace-done .scroll:before {
   	width: 3px;
   	height: 47px;
   	z-index: -1;
-  	background-color: #c3df5f ;
+  	background-color: red ;
   	transform: scale(1, 0);
   	transform-origin: left bottom;
   	transition: -webkit-transform 0.4s cubic-bezier(0.08, 0.92, 0.35, 1);
@@ -2435,7 +2435,11 @@ Cont
 .brandDetail .cont a {
 	color:#fff;
 	cursor: cell;
-	pointer-events:none
+	pointer-events:none;
+}
+
+.brandDetail .cont h4 a {
+	pointer-events:none;
 }
 
 .brandDetail .cont .title .eng {
