@@ -18,9 +18,9 @@
 
 //loading
 
-$(function(){
+jQuery(function(){
   setTimeout(function(){
-    $('body').addClass('loading');
+    jQuery('body').addClass('loading');
   },0);
 });
 
@@ -31,17 +31,17 @@ $(function(){
 ---------------------------------------------------
 */
 
-$(function(){
-  $(".humbSP .servBtn .hover").on("click", function() {
-    $('.humbNavUnder').addClass('active');
-    $('.humbSP').removeClass('active');
+jQuery(function(){
+  jQuery(".humbSP .servBtn .hover").on("click", function() {
+    jQuery('.humbNavUnder').addClass('active');
+    jQuery('.humbSP').removeClass('active');
   });
 });
 
-$(function(){
-  $(".backIndex").on("click", function() {
-    $('.humbNavUnder').removeClass('active');
-    $('.humbSP').addClass('active');
+jQuery(function(){
+  jQuery(".backIndex").on("click", function() {
+    jQuery('.humbNavUnder').removeClass('active');
+    jQuery('.humbSP').addClass('active');
   });
 });
 
@@ -64,15 +64,15 @@ function handle(mq) {
   if (mq.matches) {
 
     // ウィンドウサイズが768px以下のとき
-    $(document).ready(function(){
-    var hSize = $(window).height();
-      $('.mv').height(hSize);
+    jQuery(document).ready(function(){
+    var hSize = jQuery(window).height();
+      jQuery('.mv').height(hSize);
     });
 
     // ページをリサイズした時の処理
-    $(window).resize(function(){
-    var hSize = $(window).height();
-      $('.mv').height(hSize);
+    jQuery(window).resize(function(){
+    var hSize = jQuery(window).height();
+      jQuery('.mv').height(hSize);
     });
 
   } else {
@@ -90,8 +90,8 @@ function handle(mq) {
 
 //selectBox
 
-$('#parent').on('change', function(){
-  $('body').addClass("selectJpn");
+jQuery('#parent').on('change', function(){
+  jQuery('body').addClass("selectJpn");
 });
 
 
