@@ -3129,15 +3129,6 @@ body.pace-done .mvVisual .slide {
 	filter: grayscale(1);
 }
 
-.mvVisual .slide.one .slideInner {
-	background-image: url(../img/index/fv/top_02.jpg);
-}
-.mvVisual .slide.two .slideInner {
-	background-image: url(../img/index/fv/top_01.jpg);
-}
-.mvVisual .slide.three .slideInner {
-	background-image: url(../img/index/fv/top_03.jpg);
-}
 
 
 /* slideShow */
