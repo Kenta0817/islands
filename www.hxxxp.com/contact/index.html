@@ -712,7 +712,7 @@ document.addEventListener('lazybeforeunveil', function(e){
 
 //Slick
 
-$('.baseSlider').slick({
+jQuery('.baseSlider').slick({
   dots: false,
   infinite: true,
   speed: 300,
@@ -729,7 +729,7 @@ $('.baseSlider').slick({
   }]
 });
 
-$('.brandList').slick({
+jQuery('.brandList').slick({
   dots: true,
   arrows: false,
   infinite: true,
@@ -750,7 +750,7 @@ $('.brandList').slick({
 });
 
 
-$('.blogSlider').slick({
+jQuery('.blogSlider').slick({
   dots: false,
   infinite: true,
   speed: 300,
@@ -768,22 +768,22 @@ $('.blogSlider').slick({
 });
 
 //Blogスライダーの数を判定
-$(function () {
-    var slideCount = $('.blogSlider .slick-slide').length;
+jQuery(function () {
+    var slideCount = jQuery('.blogSlider .slick-slide').length;
   
     if (slideCount < 5) {
-      $('.blogSlider .slick-track').addClass("slick-no-current");
+      jQuery('.blogSlider .slick-track').addClass("slick-no-current");
     }
 });
 
 
 //inviews
-$(function() {
+jQuery(function() {
 
   //galeeryList
-  $('.galleryList').on('inview', function(event, isInView){
+  jQuery('.galleryList').on('inview', function(event, isInView){
     if (isInView) {
-        $('.galleryList').slick({
+        jQuery('.galleryList').slick({
           dots: false,
           arrows: false,
           infinite: true,
@@ -805,48 +805,48 @@ $(function() {
   });
 
   //slideIn
-  $('.inview').on('inview', function(event, isInView){
+  jQuery('.inview').on('inview', function(event, isInView){
     if (isInView) {
-        $(this).addClass('slideIn');
+        jQuery(this).addClass('slideIn');
     } 
   });
 
   //animStart
-  $('.inview2').on('inview', function(event, isInView){
+  jQuery('.inview2').on('inview', function(event, isInView){
     if (isInView) {
-        $(this).addClass('animStart');
+        jQuery(this).addClass('animStart');
     } 
   });
 
   //lineStart
-  $('.inview3').on('inview', function(event, isInView){
+  jQuery('.inview3').on('inview', function(event, isInView){
     /*setTimeoutではthisうまく使えないのを回避するために*/
-    var div = $(this);
+    var div = jQuery(this);
 
     if (isInView) {
         setTimeout(function(){
-          $(div).addClass('lineStart');
+          jQuery(div).addClass('lineStart');
         },600);
     } 
   });
 
   //fadeInUp
-  $('.fadeInUp').on('inview', function(event, isInView){
+  jQuery('.fadeInUp').on('inview', function(event, isInView){
     if (isInView) {
-        $(this).addClass('active');
+        jQuery(this).addClass('active');
     } 
   });
 
-  $('.fadeInUp2').on('inview', function(event, isInView){
+  jQuery('.fadeInUp2').on('inview', function(event, isInView){
     if (isInView) {
-        $(this).addClass('active');
+        jQuery(this).addClass('active');
     }
   });
 
   //filter
-  $('.filter').on('inview', function(event, isInView){
+  jQuery('.filter').on('inview', function(event, isInView){
     if (isInView) {
-        $(this).addClass('filterDel');
+        jQuery(this).addClass('filterDel');
     } 
   });
 
